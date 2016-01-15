@@ -4,12 +4,14 @@
 import random
 import csv
 import math
+
 class google_employee:  #object==google_employee
 
     def job_Select(type):
         foo = ['jd', 'sd', 'markman', 'softman']
         y = random.choice(foo)#randomly select the employees job title        
         return y
+
     def methodIncome(self):#based on this job selection they will be given an annual salary based on a random selection of the ranges below
         x = self.job_Select()
         if x=="jd": 
@@ -21,6 +23,7 @@ class google_employee:  #object==google_employee
         elif x=="softman":
             x = random.randint(93389,176169) #softman=software manager
         return x
+
     def purchasing_income(self):#this is the home buyers/boring family heads of household
         p = True
         disposable = self.methodIncome()*4    #I took a really general rule of thumb that states one can 			afford a house 4 or even 5 times their gross annual income from http://www.mymoneyblog.com/4-different-rules-of-thumb-for-how-much-house-you-can-afford.html
@@ -36,6 +39,7 @@ class google_employee:  #object==google_employee
             p = True
             print j,(','),p,(','),new_housing
         #return j,disposable
+
     def rental_rates(self): #this is the renter half function, probably all miserable singles . . .
         p = True
         r_values = random.choice(open('fixed1.csv').readlines())  #pull from the rental values I 		sifted through craigslist for              
@@ -55,8 +59,8 @@ class google_employee:  #object==google_employee
             p = True
             print s,(','),p,(','),rent
         #return s,il
+
 def main():
-  
     for i in range(0,600):#for this split I'm going to do half as home buyers and half as renter, this is the home buyer
         google_object=google_employee()
         (google_object.purchasing_income())
