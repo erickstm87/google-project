@@ -1,4 +1,5 @@
 #!/usr/bin/python
+#author Tommy Erickson
 #this code is my displacement algorithm
 #Note: on the csv files the bash command 'grep -c "echo" FILE.csv"' will give me the count of true/false (echo) in the file 
 import random
