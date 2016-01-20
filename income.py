@@ -61,10 +61,9 @@ class google_employee:  #object==google_employee
         #return s,il
 
 def main():
+    google_object = google_employee()
     for i in range(0,600):#for this split I'm going to do half as home buyers and half as renter, this is the home buyer
-        google_object=google_employee()
         (google_object.purchasing_income())
     for i in range(0,600): #this is the rental half
-        google_object=google_employee()
         (google_object.rental_rates()) #note:after examining rental rates on craigslist I really wouldn't be surprised if they could afford all renting units
 main()
